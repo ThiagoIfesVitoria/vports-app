@@ -5,7 +5,7 @@ import numpy as np
 # try:
 #     df = pd.read_excel(r"C:\Users\trsantos\OneDrive - Vports\PCM\02_Gestão_Ativos\02_Estrategia_Ativos\Gestão_Ativos - Limites_de_Baterias.xlsx", skiprows=4)
 # except:
-df = pd.read_excel("limites_de_baterias.xlsx", skiprows=4)
+df = pd.read_excel("assets/limites_de_baterias.xlsx", skiprows=4)
 
 # Defina as condições
 condicoes = [
@@ -30,7 +30,8 @@ for _, row in df.iterrows():
     chave = (row["DESCRIÇÃO"], row["DEMANDAS/NATUREZA"], row["ORIGEM"])
     dicionario_resp[chave] = row["Responsável"]
 
-st.write("Definição do Responsável em ações de segurança")
+st.image("assets/Logo.png",width=100)
+st.title("Definição do Responsável em :blue[_ações de segurança_]")
 # Extrair listas únicas
 descricoes = sorted(set(chave[0] for chave in dicionario_resp))
 descricao = st.selectbox("Escolha a DESCRIÇÃO", descricoes)
@@ -47,4 +48,6 @@ chave = (descricao, demanda, origem)
 responsavel = dicionario_resp.get(chave, "Não encontrado")
 st.write("Responsável:", responsavel)
 
-
+with st.popover("Auditoria"):
+    st.write("Dados acordados no dia 31/07/2003")
+    st.write("Entre os Supervisores: João Oliveira, Lucas Teste e Thiago Nespoli")
