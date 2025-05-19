@@ -48,6 +48,7 @@ chave = (descricao, demanda, origem)
 responsavel = dicionario_resp.get(chave, "Não encontrado")
 st.write("Responsável:", responsavel)
 
-with st.popover("Auditoria"):
-    st.write("Dados acordados no dia 31/07/2003")
-    st.write("Entre os Supervisores: João Oliveira, Lucas Teste e Thiago Nespoli")
+with st.popover("Relatório de Auditoria"):
+    st.markdown("**Data do Acordo:** 31/07/2003")
+    st.markdown("**Supervisores Responsáveis:**")
+    st.markdown("- *João Oliveira* (Supervisor do PCM)  \n- *Lucas Teste* (Supervisor de Operações)  \n- *Thiago Nespoli* (Supervisor de T.I)")
