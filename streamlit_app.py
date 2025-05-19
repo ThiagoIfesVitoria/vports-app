@@ -46,7 +46,7 @@ origem = st.selectbox("Escolha a ORIGEM", origens)
 # Exibir o responsável
 chave = (descricao, demanda, origem)
 responsavel = dicionario_resp.get(chave, "Não encontrado")
-st.write("Responsável:", responsavel)
+st.write("**Responsável:**", responsavel)
 
 with st.popover("Relatório de Auditoria"):
     st.markdown("**Data do Acordo:** 31/07/2003")
