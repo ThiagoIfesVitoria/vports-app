@@ -30,6 +30,7 @@ for _, row in df.iterrows():
     chave = (row["DESCRIÇÃO"], row["DEMANDAS/NATUREZA"], row["ORIGEM"])
     dicionario_resp[chave] = row["Responsável"]
 
+st.write("Definição do Responsável em ações de segurança")
 # Extrair listas únicas
 descricoes = sorted(set(chave[0] for chave in dicionario_resp))
 descricao = st.selectbox("Escolha a DESCRIÇÃO", descricoes)
@@ -45,4 +46,5 @@ origem = st.selectbox("Escolha a ORIGEM", origens)
 chave = (descricao, demanda, origem)
 responsavel = dicionario_resp.get(chave, "Não encontrado")
 st.write("Responsável:", responsavel)
+
 
