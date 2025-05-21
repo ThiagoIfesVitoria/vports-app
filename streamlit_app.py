@@ -75,6 +75,6 @@ if st.button(":blue[_mostrar detalhes_]", type="tertiary"):
     mostrar_detalhes(responsavel)
 
 with st.popover("Relatório de Auditoria"):
-    st.markdown("**Data do Acordo:** 31/07/****")
+    st.markdown("**Data do Acordo:** --/--/----")
     st.markdown("**Supervisores Responsáveis:**")
-    st.markdown("- *Lucas Bozolan Mendes* (Gerente de Operações) \n- *Joao Antonio Oliveira* (Supervisor do PCM)  \n- *Tiago Boldrini de Azevedo* (Supervisor de T.I)")
+    st.markdown("- *Lucas Bozolan Mendes* (Gerente de Operações) \n- *Joao Antonio Oliveira* (Supervisor de PCM)")
